@@ -6,5 +6,5 @@ The purpose of this repo is to archive and be able to retrieve cypress test reci
 
 ## Drupal Cypress Tests
 
-[Log Into Drupal and Create a Node](LogIntoDrupalAndCreateNode.md)
+[Log Into Drupal and Create a Node](/drupal/LogIntoDrupalAndCreateNode.md)
 
