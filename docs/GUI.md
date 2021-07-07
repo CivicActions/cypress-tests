@@ -17,12 +17,12 @@ See also [Plugins](Plugins.md).
 You can install the Cypress outside the main project and symlink the files from the main repo to run the tests with the GUI. Symlinking ensures the tests are in the same place where it is run by the pipeline and avoid having the additional dependencies in the project repo. Here are example steps that were used for a project:
 
 1. Move some files so that we can rollback later.
-```
+```bash
 mkdir archive
 mv cypress archive/
 ```
 2. Symlink to your Cypress data.
-```
+```bash
 ln -s ~/path/to/project-repo/tests/cypress/cypress cypress
 ln -s ~/path/to/project-repo/tests/cypress/cypress.env.json cypress.env.json
 ln -s ~/path/to/project-repo/tests/cypress/cypress.external.json cypress.json
