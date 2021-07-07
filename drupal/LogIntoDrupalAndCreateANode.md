@@ -1,10 +1,8 @@
 # Log into Drupal and Create a Node
 
-From Sam Lerner:
+From [Sam Lerner](https://github.com/synterra), "I made new Cypress commands in `support/commands.js` to do logging in", like:
 
-I made new Cypress commands in `support/commands.js` to do logging in, like
-
-```
+```javascript
 Cypress.Commands.add('login', function(username) {
   // The user/pass are set when the user is created
   // in docker/php/build.sh  return cy.request({
@@ -21,9 +19,9 @@ Cypress.Commands.add('login', function(username) {
 });
 ```
 
-Used this to get the token:
+Use this to get the token:
 
-```
+```javascript
 Cypress.Commands.add("getRestToken", (user, password) => {
   cy.login(user, password);
   return cy.request({
@@ -35,7 +33,7 @@ Cypress.Commands.add("getRestToken", (user, password) => {
 
 Here's a snippet to create a node:
 
-```
+```javascript
 Cypress.Commands.add("createNode", (token, nodeType, fields, relationships) => {
   return cy.request({
     method: 'POST',
