@@ -6,6 +6,6 @@ The purpose of this repo is to archive and be able to retrieve cypress test reci
 
 Available under [/docs](/docs).
 
-## Drupal Cypress Test Examples
+## Examples
 
-[Log Into Drupal and Create a Node](/drupal/LogIntoDrupalAndCreateANode.md)
+Available under [/examples](/examples).
