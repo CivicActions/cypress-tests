@@ -1,10 +1,7 @@
-# Read.me
+# Cypress Tests
 
-The purpose of this repo is to archive and be able to retrieve cypress test recipes created/contributed by CivicActions staff.
+The purpose of this repo is to archive and be able to retrieve cypress test recipes and documentation created/contributed by CivicActions staff.
 
+## Drupal Cypress Test Examples
 
-
-## Drupal Cypress Tests
-
-[Log Into Drupal and Create a Node](/drupal/LogIntoDrupalAndCreateNode.md)
-
+[Log Into Drupal and Create a Node](/drupal/LogIntoDrupalAndCreateANode.md)
