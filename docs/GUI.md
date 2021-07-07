@@ -30,7 +30,7 @@ ln -s ~/path/to/project-repo/tests/cypress/integration integration
 ln -s ~/path/to/project-repo/tests/cypress/support support
 ```
 
-> I think people using the local UI for test development is fine, personally - it's helpful to have the container be able to run locally though, so that people not working on tests (or debugging issues where tests fail in CI but pass in the UI) can run them conveniently - [@grugnog](https://github.com/grugnog)
+> I think people using the local UI for test development is fine, personally - it's helpful to have the container be able to run locally though, so that people not working on tests (or debugging issues where tests fail in CI but pass in the UI) can run them conveniently - [Owen Barton](https://github.com/grugnog)
 
 ## Useful references
 
