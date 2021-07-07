@@ -2,6 +2,8 @@
 
 We have a [Docker image available](https://github.com/drydockcloud/ci-cypress) that will run your Cypress tests locally and in CI pipelines.
 
+> Using docker means folks don't have to install all the node stuff - @synterra
+
 ## GUI
 
 The Docker image above supports running the GUI (aka interactive mode) using X11. From https://github.com/drydockcloud/ci-cypress/blob/master/docker-compose.cypress.yaml:
