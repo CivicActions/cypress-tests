@@ -4,8 +4,8 @@ The purpose of this repo is to archive and be able to retrieve cypress test reci
 
 ## Docs
 
-Available under [/docs](/docs).
+Available under [docs](/docs).
 
 ## Examples
 
-Available under [/examples](/examples).
+Available under [examples](/examples).
