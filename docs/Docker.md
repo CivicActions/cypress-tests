@@ -1,6 +1,6 @@
 # Cypress and Docker
 
-We have a [Docker image available](https://github.com/drydockcloud/ci-cypress) that will run your Cypress tests locally and in CI pipelines.
+We have a [Docker image available](https://github.com/drydockcloud/ci-cypress) that is build on top of the [Cypress Docker image](https://github.com/cypress-io/cypress-docker-images) and will run your Cypress tests locally and in CI pipelines.
 
 > Using docker means folks don't have to install all the node stuff - [Sam Lerner](https://github.com/synterra)
 
