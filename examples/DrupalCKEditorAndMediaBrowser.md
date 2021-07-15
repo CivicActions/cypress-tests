@@ -1,5 +1,7 @@
 # Test interacts with CKEditor and Media Browser
 
+**:warning: This seems to be intermittently failing even with the intercept so needs more research**
+
 The below example test interacts WYSIWYG input on a Drupal node form page. Things to note:
 
 * Use of `intercept` and `wait` for the Media Browser. This [combination is recommended over waiting an arbitary amount of time](https://docs.cypress.io/guides/references/best-practices#Unnecessary-wait-for-cy-get).
