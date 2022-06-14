@@ -12,22 +12,12 @@ The [CA accessibility site](https://github.com/CivicActions/accessibility) has C
 
 See also [Plugins](Plugins.md).
 
-### Symlinks
+### In the same repo but with different project path and json file
 
-You can install the Cypress outside the main project and symlink the files from the main repo to run the tests with the GUI. Symlinking ensures the tests are in the same place where it is run by the pipeline and avoid having the additional dependencies in the project repo. Here are example steps that were used for a project:
+Use a command below after installing the dependencies.
 
-1. Move some files so that we can rollback later.
-```bash
-mkdir archive
-mv cypress archive/
 ```
-2. Symlink to your Cypress data.
-```bash
-ln -s ~/path/to/project-repo/tests/cypress/cypress cypress
-ln -s ~/path/to/project-repo/tests/cypress/cypress.env.json cypress.env.json
-ln -s ~/path/to/project-repo/tests/cypress/cypress.external.json cypress.json
-ln -s ~/path/to/project-repo/tests/cypress/integration integration
-ln -s ~/path/to/project-repo/tests/cypress/support support
+yarn run cypress open --project ./tests/cypress --config-file cypress.external.json
 ```
 
 > I think people using the local UI for test development is fine, personally - it's helpful to have the container be able to run locally though, so that people not working on tests (or debugging issues where tests fail in CI but pass in the UI) can run them conveniently - [Owen Barton](https://github.com/grugnog)
