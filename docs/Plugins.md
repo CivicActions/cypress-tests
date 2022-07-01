@@ -16,6 +16,7 @@ RUN yarn add --cwd ../ @testing-library/cypress
 
 See also [Docker](Docker.md).
 
+**Note**: In the [9.7.0 release](https://github.com/drydockcloud/ci-cypress/releases/tag/9.7.0) we added the plugins to the drydockcloud/ci-cypress image so that can be used directly.
 
 ## Useful references
 
