@@ -51,7 +51,7 @@ Cypress.Commands.add('checkA11yWithMultipleViewPorts', () => {
 
 ## Loading a sitemap and testing all pages
 
-Credit to @thejuliekramer for figuring this out. Use the [x2js](https://www.npmjs.com/package/x2js) package to load all URLs from the sitemap.
+Credit to [@thejuliekramer](https://github.com/thejuliekramer) for figuring this out. Use the [x2js](https://www.npmjs.com/package/x2js) package to load all URLs from the sitemap.
 
 ```javascript
 import "x2js";
