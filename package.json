@@ -1,0 +1,13 @@
+{
+  "name": "cypress-tests",
+  "author": "CivicActions",
+  "version": "0.1.0",
+  "description": "A repository to store Cypress test recipes created by CivicActions engineers",
+  "main": "index.js",
+  "repository": "git@github.com:CivicActions/cypress-tests.git",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "cypress": "^11.2.0"
+  }
+}

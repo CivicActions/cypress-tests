@@ -1,0 +1,9 @@
+# IntelliJ files.
+.idea
+
+# OS generated files.
+.DS_Store
+
+# node modules.
+node_modules
+
