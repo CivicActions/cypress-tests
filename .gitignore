@@ -7,3 +7,6 @@
 # node modules.
 node_modules
 
+# Cypress artifacts.
+cypress/videos
+cypress/screenshots
