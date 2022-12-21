@@ -9,3 +9,7 @@ Available under [docs](/docs).
 ## Examples
 
 Available under [examples](/examples).
+
+## Contributing
+
+Please see [CONTRIBUTING.md](/.github/contributing.md) for details on how to help grow this repository.
