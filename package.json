@@ -7,6 +7,11 @@
   "repository": "git@github.com:CivicActions/cypress-tests.git",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run:examples": "cypress run --spec \"cypress/e2e/2-advanced-examples/*.cy.js\""
+  },
   "dependencies": {
     "cypress": "^12.2.0"
   }
