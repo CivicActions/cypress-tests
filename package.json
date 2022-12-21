@@ -8,6 +8,6 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "cypress": "^12.1.0"
+    "cypress": "^12.2.0"
   }
 }
