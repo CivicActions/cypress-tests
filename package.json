@@ -10,9 +10,13 @@
   "scripts": {
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "cy:run:examples": "cypress run --spec \"cypress/e2e/2-advanced-examples/*.cy.js\""
+    "cy:run:examples": "cypress run --spec \"cypress/e2e/2-advanced-examples/*.cy.js\"",
+    "cy:run:ca-examples": "cypress run --spec \"cypress/e2e/3-civicactions-examples/*.cy.js\""
   },
   "dependencies": {
-    "cypress": "^12.2.0"
+    "axe-core": "^4.6.1",
+    "cypress": "^12.2.0",
+    "cypress-axe": "^1.2.0",
+    "x2js": "^3.4.4"
   }
 }

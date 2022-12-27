@@ -2,6 +2,8 @@
 
 We can test for accessibility issues with [axe-core](https://github.com/dequelabs/axe-core) in Cypress using [cypress-axe](https://github.com/component-driven/cypress-axe).
 
+Running version of the below examples is located in [a11y.cy.js](../cypress/e2e/3-civicactions-examples/a11y.cy.js).
+
 Here an example of functions you can add to `commands.js` to test accessibility with different window sizes and log them in a table:
 
 ```javascript
@@ -69,9 +71,22 @@ Cypress.Commands.add("getSitemapLocations", () => {
       return urls;
     });
 });
+
+Cypress.Commands.add("isWithinTimeframe", (lastmod, timeframe) => {
+  const now = new Date();
+  if (lastmod != "undefined") {
+    var lastmod = lastmod;
+  } else {
+    var lastmod = null;
+  }
+  const then = new Date(lastmod);
+  const msBetweenDates = Math.abs(then.getTime() - now.getTime());
+  const daysBetweenDates = msBetweenDates / (24 * 60 * 60 * 1000);
+  return cy.wrap(daysBetweenDates < timeframe);
+});
 ```
 
-Use that custom command to check all pages for accessibility issues and do so only after set number of days since last modified. The following is the `cypress.config.js` file contents:
+Use the custom commands to check all pages for accessibility issues and do so only after set number of days since last modified. The following is the `cypress.config.js` file contents:
 
 ```javascript
 const { defineConfig } = require("cypress");
