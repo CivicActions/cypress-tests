@@ -4,6 +4,14 @@ We can test for accessibility issues with [axe-core](https://github.com/dequelab
 
 Running version of the below examples is located in [a11y.cy.js](../cypress/e2e/3-civicactions-examples/a11y.cy.js).
 
+Outline
+- [Adding accessibility commands](#adding-accessibility-commands) - Learn how to add accessibility-related Cypress commands.
+- [Loading a sitemap and testing all pages](#loading-a-sitemap-and-testing-all-pages) - An example for checking recently changed pages from a sitemap.
+- [Axe rules options](#axe-rules-options) - Learn how to alter axe rule definitions for test runs.
+- [Useful references](#useful-references)
+
+## Adding accessibility commands
+
 Here an example of functions you can add to `commands.js` to test accessibility with different window sizes and log them in a table:
 
 ```javascript
@@ -141,6 +149,34 @@ describe("Accessibility is honored", () => {
   });
 });
 ```
+
+## Axe rules options
+
+Axe has many rules to test against for accessibility violations, but you can choose to filter out certain rules during a test run. The `cy.checkA11y()` has an object you can pass in to alter the rules definitions.
+
+```js
+    cy.visit('/');
+    cy.injectAxe();
+    cy.checkA11y(
+      // The first object is for Context.
+      {},
+      // The second object is for Options, which contains "rules".
+      {
+        rules: {
+          // There is one 'Ensures all page content is contained by landmarks' listed, but I can't find
+          // this violation using other tools...so don't know how to fix.
+          'region': {enabled: false},
+        }
+      },
+      terminalLog
+    );
+```
+
+In that example, the test still checks all the other rules than "region", which is the rule name for making sure "all page content is contained by landmarks". This is a better alternative to skipping the test, `it.skip()` until you can fix the code that makes the rule pass.
+
+However, it can be confusing to know what each rule stands for, and whenever you want to exclude or alter a rule definition, you should consult the Rules Description documentation. It is nicely broken out into different sections based on WCAG levels amongst other parameters.
+
+- [Rules Description documentation](https://github.com/dequelabs/axe-core/blob/master/doc/rule-descriptions.md)
 
 ## Useful references
 
