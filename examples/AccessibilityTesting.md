@@ -4,7 +4,7 @@ We can test for accessibility issues with [axe-core](https://github.com/dequelab
 
 Running version of the below examples is located in [a11y.cy.js](../cypress/e2e/3-civicactions-examples/a11y.cy.js).
 
-Outline
+Outline:
 - [Adding accessibility commands](#adding-accessibility-commands) - Learn how to add accessibility-related Cypress commands.
 - [Loading a sitemap and testing all pages](#loading-a-sitemap-and-testing-all-pages) - An example for checking recently changed pages from a sitemap.
 - [Axe rules options](#axe-rules-options) - Learn how to alter axe rule definitions for test runs.
