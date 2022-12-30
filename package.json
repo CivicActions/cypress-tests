@@ -14,6 +14,8 @@
     "cy:run:ca-examples": "cypress run --spec \"cypress/e2e/3-civicactions-examples/*.cy.js\""
   },
   "dependencies": {
+    "@cypress-audit/lighthouse": "^1.3.1",
+    "@cypress-audit/pa11y": "^1.3.1",
     "axe-core": "^4.6.1",
     "cypress": "^12.2.0",
     "cypress-axe": "^1.2.0",
