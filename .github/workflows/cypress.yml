@@ -3,7 +3,7 @@ name: cypress tests
 on: [pull_request]
 
 permissions:
-  actions: write
+  actions: all
 
 jobs:
   build:
