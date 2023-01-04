@@ -2,6 +2,9 @@ name: cypress tests
 
 on: [pull_request]
 
+permissions:
+  actions: write
+
 jobs:
   build:
     name: Building site and running cypress tests
@@ -19,7 +22,7 @@ jobs:
 
       - name: Publish test results.
         uses: EnricoMi/publish-unit-test-result-action@v1
-        if: github.actor != 'dependabot[bot]'
+        if: always()
         with:
           files: cypress/*.xml
           check_name: "Cypress Test Results"
