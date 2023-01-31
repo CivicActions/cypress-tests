@@ -2,7 +2,7 @@
 
 We can test for accessibility issues with [axe-core](https://github.com/dequelabs/axe-core) in Cypress using [cypress-axe](https://github.com/component-driven/cypress-axe).
 
-Running version of the below examples is located in [a11y.cy.js](../cypress/e2e/3-civicactions-examples/a11y.cy.js).
+Running version of the below examples is located in [a11y.cy.js](/cypress/e2e/3-civicactions-examples/a11y.cy.js).
 
 Outline:
 - [Adding accessibility commands](#adding-accessibility-commands) - Learn how to add accessibility-related Cypress commands.
