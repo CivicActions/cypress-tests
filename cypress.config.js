@@ -15,7 +15,6 @@ module.exports = defineConfig({
 
       on("task", {
         lighthouse: lighthouse(),
-        pa11y: pa11y(console.log.bind(console)),
       });
     },
   },
