@@ -8,7 +8,7 @@ Available under [docs](/docs).
 
 ## Examples
 
-Available under [examples](/examples).
+Available under [examples](/docs/examples).
 
 ## Contributing
 
