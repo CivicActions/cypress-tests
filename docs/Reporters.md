@@ -17,9 +17,9 @@ Cypress has builtin support for [JUnit reporting](https://docs.cypress.io/guides
 
 ## Other reporters
 
-* [Xunit Viewer](https://github.com/lukejpreston/xunit-viewer) that can take the generated XML files and produce a HTML report page.
+- [Xunit Viewer](https://github.com/lukejpreston/xunit-viewer) that can take the generated XML files and produce a HTML report page.
 
 ## Useful references
 
-* https://github.com/lukejpreston/xunit-viewer
-* https://docs.cypress.io/guides/tooling/reporters
+- https://github.com/lukejpreston/xunit-viewer
+- https://docs.cypress.io/guides/tooling/reporters

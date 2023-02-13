@@ -39,7 +39,7 @@ context('Accessibility', () => {
         id,
         impact,
         description,
-        nodes: nodes.length
+        nodes: nodes.length,
       })
     )
 
@@ -58,7 +58,7 @@ context('Accessibility', () => {
       'iphone-6',
       'iphone-6+',
       'ipad-mini',
-    ].forEach(size => {
+    ].forEach((size) => {
       if (Array.isArray(size)) {
         cy.viewport(size[0], size[1])
       } else {
@@ -74,8 +74,8 @@ context('Accessibility', () => {
   })
 
   // Credit to @thejuliekramer for figuring out working with sitemaps
-  Cypress.Commands.add("getSitemapLocations", () => {
-    return fetch("/sitemap.xml")
+  Cypress.Commands.add('getSitemapLocations', () => {
+    return fetch('/sitemap.xml')
       .then((res) => res.text())
       .then((xml) => {
         const x2js = new X2JS()
@@ -85,9 +85,9 @@ context('Accessibility', () => {
       })
   })
 
-  Cypress.Commands.add("isWithinTimeframe", (lastmod, timeframe) => {
+  Cypress.Commands.add('isWithinTimeframe', (lastmod, timeframe) => {
     const now = new Date()
-    if (lastmod != "undefined") {
+    if (lastmod != 'undefined') {
       var lastmod = lastmod
     } else {
       var lastmod = null
@@ -98,33 +98,34 @@ context('Accessibility', () => {
     return cy.wrap(daysBetweenDates < timeframe)
   })
 
-  describe("Accessibility is honored", () => {
-    it("on every page of the a11y site", () => {
-      let timeframe = 30;
+  describe('Accessibility is honored', () => {
+    it('on every page of the a11y site', () => {
+      let timeframe = 30
       cy.getSitemapLocations().then((pages) => {
-
         // Format of pages is ["https://lincs.ed.gov/", "2019-04-08T14:34Z"].
         pages.forEach((page) => {
           cy.isWithinTimeframe(page[1], timeframe).then((withinTimeframe) => {
-
             // Ensure the page has been changed in the timeframe and the pages are not external or PDFs.
-            if (withinTimeframe && page[0].includes(a11ysite) && path.extname(page[0]) !== '.pdf') {
+            if (
+              withinTimeframe &&
+              page[0].includes(a11ysite) &&
+              path.extname(page[0]) !== '.pdf'
+            ) {
+              cy.visit(page[0], { failOnStatusCode: false })
 
-              cy.visit(page[0], { failOnStatusCode: false });
-
-              cy.injectAxe();
+              cy.injectAxe()
               cy.checkA11y(
                 null,
                 {
-                  includedImpacts: ["minor", "moderate", "serious", "critical"],
+                  includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
                 },
                 cy.terminalLog,
                 true
-              );
+              )
             }
-          });
-        });
-      });
-    });
-  });
+          })
+        })
+      })
+    })
+  })
 })

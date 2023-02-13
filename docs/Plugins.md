@@ -1,7 +1,7 @@
 # Some Cypress plugins we use
 
-* [cypress-axe](https://github.com/component-driven/cypress-axe): Test accessibility with [axe-core](https://github.com/dequelabs/axe-core) in Cypress. See also [examples/AccessibilityTesting.md](/examples/AccessibilityTesting.md).
-* [cypress-testing-library](https://github.com/testing-library/cypress-testing-library): This allows you to use all the useful [DOM Testing Library](https://github.com/testing-library/cypress-testing-library) methods in your tests.
+- [cypress-axe](https://github.com/component-driven/cypress-axe): Test accessibility with [axe-core](https://github.com/dequelabs/axe-core) in Cypress. See also [examples/AccessibilityTesting.md](/examples/AccessibilityTesting.md).
+- [cypress-testing-library](https://github.com/testing-library/cypress-testing-library): This allows you to use all the useful [DOM Testing Library](https://github.com/testing-library/cypress-testing-library) methods in your tests.
 
 ## Docker
 
@@ -20,5 +20,5 @@ See also [Docker](Docker.md).
 
 ## Useful references
 
-* https://github.com/component-driven/cypress-axe
-* https://timdeschryver.dev/blog/setting-up-cypress-with-axe-for-accessibility
+- https://github.com/component-driven/cypress-axe
+- https://timdeschryver.dev/blog/setting-up-cypress-with-axe-for-accessibility

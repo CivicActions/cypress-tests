@@ -24,4 +24,4 @@ yarn run cypress open --project ./tests/cypress --config-file cypress.external.j
 
 ## Useful references
 
-* https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/#Interactive-mode
+- https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/#Interactive-mode

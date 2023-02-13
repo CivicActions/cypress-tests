@@ -1,10 +1,10 @@
-- search: "´"
+- search: '´'
   replacement: "'"
-- search: "‘"
+- search: '‘'
   replacement: "'"
-- search: "’"
+- search: '’'
   replacement: "'"
-- search: "“"
+- search: '“'
   replacement: '"'
-- search: "”"
+- search: '”'
   replacement: '"'

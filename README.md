@@ -23,15 +23,15 @@ can run the following commands:
 
 ## Docs
 
-You should start by reading the "Getting Started" documentation section that will orient you to Cypress and how 
+You should start by reading the "Getting Started" documentation section that will orient you to Cypress and how
 CivicActions uses it to test web applications.
 
 - Available under [docs](/docs).
 
 ## Examples
 
-If you are a seasoned Cypress user and are looking for concrete examples of how to do something, you can find them 
-in the examples section of documentation. We try to turn the examples into actual tests and link to the working 
+If you are a seasoned Cypress user and are looking for concrete examples of how to do something, you can find them
+in the examples section of documentation. We try to turn the examples into actual tests and link to the working
 tests in the example documentation. We also include handy custom commands you can use in your own tests.
 
 - Available under [examples](/docs/examples).
@@ -41,21 +41,21 @@ tests in the example documentation. We also include handy custom commands you ca
 
 ## Contributing
 
-We encourage you to contribute to this repository as you are working on your client and personal projects. It is 
-often the case that developers will add a new Cypress best practice to project work first, but not all of that 
+We encourage you to contribute to this repository as you are working on your client and personal projects. It is
+often the case that developers will add a new Cypress best practice to project work first, but not all of that
 knowledge is known and shared outside the project.
 
-For example, this issue https://github.com/CivicActions/cypress-tests/issues/8 was created because a developer 
-encountered uncaught exceptions causing a Cypress test to fail but wanted to ask what others thought the best 
-practice way to handle this was. The developer then created a PR to add an example to the repository that could 
+For example, this issue https://github.com/CivicActions/cypress-tests/issues/8 was created because a developer
+encountered uncaught exceptions causing a Cypress test to fail but wanted to ask what others thought the best
+practice way to handle this was. The developer then created a PR to add an example to the repository that could
 inform future developers that encounter the same issue on their projects.
 
 Please see [CONTRIBUTING.md](/.github/contributing.md) for details on how to help grow this repository.
 
 ## Communications
 
-- We use the #engineering-qa channel in the CivicActions Slack workspace to discuss Cypress and share knowledge. You 
+- We use the #engineering-qa channel in the CivicActions Slack workspace to discuss Cypress and share knowledge. You
   can follow that channel to be informed of QA topics and updates to this repository.
-- The [QA Practice Area](https://guidebook.civicactions.com/en/latest/practice-areas/about-practice-areas/) has a 
-  monthly meeting that anyone interested in QA is free to join. You can join the meeting by following updates in the 
+- The [QA Practice Area](https://guidebook.civicactions.com/en/latest/practice-areas/about-practice-areas/) has a
+  monthly meeting that anyone interested in QA is free to join. You can join the meeting by following updates in the
   #engineering-qa channel.
