@@ -34,7 +34,7 @@ If you are a seasoned Cypress user and are looking for concrete examples of how 
 in the examples section of documentation. We try to turn the examples into actual tests and link to the working 
 tests in the example documentation. We also include handy custom commands you can use in your own tests.
 
-- Available under [examples](/examples).
+- Available under [examples](/docs/examples).
 - Custom Cypress commands are available under [cypress/support/commands.js](/cypress/support/commands.js).
 - Handy example tests from Cypress under [cypress/e2e/2-advanced-examples](/cypress/e2e/2-advanced-examples).
 - CivicActions example tests under [cypress/e2e/3-civicactions-examples](/cypress/e2e/3-civicactions-examples).
