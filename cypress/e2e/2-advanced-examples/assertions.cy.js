@@ -35,7 +35,7 @@ context('Assertions', () => {
         .should('be.visible')
 
       // for more information about asserting element's text
-      // see https://on.cypress.io/using-cypress-faq#How-do-I-get-an-element’s-text-contents
+      // see https://on.cypress.io/using-cypress-faq#How-do-I-get-an-element's-text-contents
     })
 
     it('.and() - chain multiple assertions together', () => {
@@ -128,14 +128,14 @@ context('Assertions', () => {
       /**
        * Text from the first element.
        * @type {string}
-      */
+       */
       let text
 
       /**
        * Normalizes passed text,
        * useful before comparing text with spaces and different capitalization.
        * @param {string} s Text to normalize
-      */
+       */
       const normalizeText = (s) => s.replace(/\s/g, '').toLowerCase()
 
       cy.get('.two-elements')
@@ -165,12 +165,11 @@ context('Assertions', () => {
     })
 
     it('retries the should callback until assertions pass', () => {
-      cy.get('#random-number')
-        .should(($div) => {
-          const n = parseFloat($div.text())
+      cy.get('#random-number').should(($div) => {
+        const n = parseFloat($div.text())
 
-          expect(n).to.be.gte(1).and.be.lte(10)
-        })
+        expect(n).to.be.gte(1).and.be.lte(10)
+      })
     })
   })
 })

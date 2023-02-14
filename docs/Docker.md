@@ -9,7 +9,7 @@ We have a [Docker image available](https://github.com/drydockcloud/ci-cypress) t
 The Docker image above supports running the GUI (aka interactive mode) using X11. From https://github.com/drydockcloud/ci-cypress/blob/master/docker-compose.cypress.yaml:
 
 ```yaml
-version: "3"
+version: '3'
 
 services:
   # Example docker-compose service for cypress:
@@ -38,7 +38,7 @@ See also [GUI](GUI.md).
 
 ## Useful references
 
-* https://github.com/drydockcloud/ci-cypress
-* https://github.com/bahmutov/demo-docker-cypress-included
-* https://docs.cypress.io/examples/examples/docker
-* https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/#Interactive-mode
+- https://github.com/drydockcloud/ci-cypress
+- https://github.com/bahmutov/demo-docker-cypress-included
+- https://docs.cypress.io/examples/examples/docker
+- https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/#Interactive-mode

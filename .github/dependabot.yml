@@ -3,9 +3,9 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
       # Align with Drupal updates.
-      day: "wednesday"
+      day: 'wednesday'

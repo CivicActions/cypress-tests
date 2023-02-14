@@ -22,34 +22,38 @@ Cypress.Commands.add('login', function(username) {
 Use this to get the token:
 
 ```javascript
-Cypress.Commands.add("getRestToken", (user, password) => {
-  cy.login(user, password);
-  return cy.request({
-    method: 'GET',
-    url: '/session/token',
-  }).its('body');
-});
+Cypress.Commands.add('getRestToken', (user, password) => {
+  cy.login(user, password)
+  return cy
+    .request({
+      method: 'GET',
+      url: '/session/token',
+    })
+    .its('body')
+})
 ```
 
 Here's a snippet to create a node:
 
 ```javascript
-Cypress.Commands.add("createNode", (token, nodeType, fields, relationships) => {
-  return cy.request({
-    method: 'POST',
-    url: `/jsonapi/node/${nodeType}`,
-    headers: {
-      'Accept': 'application/vnd.api+json',
-      'Content-Type': 'application/vnd.api+json',
-      'X-CSRF-Token': token
-    },
-    body: {
-      data: {
-        type: `node--${nodeType}`,
-        attributes: fields,
-        relationships: relationships
-      }
-    }
-  }).as('body');
-});
+Cypress.Commands.add('createNode', (token, nodeType, fields, relationships) => {
+  return cy
+    .request({
+      method: 'POST',
+      url: `/jsonapi/node/${nodeType}`,
+      headers: {
+        Accept: 'application/vnd.api+json',
+        'Content-Type': 'application/vnd.api+json',
+        'X-CSRF-Token': token,
+      },
+      body: {
+        data: {
+          type: `node--${nodeType}`,
+          attributes: fields,
+          relationships: relationships,
+        },
+      },
+    })
+    .as('body')
+})
 ```
