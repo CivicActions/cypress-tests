@@ -10,4 +10,4 @@ updates:
       # Align with Drupal updates.
       day: 'wednesday'
     ignore:
-        - update-types: ["version-update:semver-patch"]
+        - update-types: ['version-update:semver-patch']
