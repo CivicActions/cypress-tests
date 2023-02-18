@@ -9,3 +9,6 @@ updates:
       interval: 'weekly'
       # Align with Drupal updates.
       day: 'wednesday'
+    ignore:
+      - dependency-name: 'cypress'
+        update-types: ['version-update:semver-patch']
