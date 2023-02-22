@@ -8,24 +8,24 @@ created/contributed by CivicActions staff.
 There's a lot to the documentation and examples sections of this repository; however, to get started quickly, you
 can run the following commands:
 
-  ```bash
-  # Install dependencies.
-  yarn
+```bash
+# Install dependencies.
+yarn
 
-  # Run the Cypress example suite tests.
-  yarn cy:run:examples
+# Run the Cypress example suite tests.
+yarn cy:run:examples
 
-  # Run the CivicActions example suite tests.
-  yarn cy:run:ca-examples
+# Run the CivicActions example suite tests.
+yarn cy:run:ca-examples
 
-  # Open the Cypress GUI to run e2e tests with the electron browser.
-  yarn cy:open --e2e --browser electron
+# Open the Cypress GUI to run e2e tests with the electron browser.
+yarn cy:open --e2e --browser electron
 
-  # Install and start Express server test site.
-  cd express
-  yarn
-  yarn dev
-  ```
+# Install and start Express server test site.
+cd express
+yarn
+yarn dev
+```
 
 ## Docs
 
