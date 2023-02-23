@@ -39,7 +39,7 @@ Cypress.Commands.add('waitForBrowser', () => {
           .iframe()
           .then(iframes => {
             cy.wrap(iframes[0]).find('a[title="Web"]').click();
-            cy.wrap(iframes[0]).find(mediaAddUploadField).should('include.text', 'YouTube');
+            cy.wrap(iframes[0]).find('#media-internet-add-upload').should('include.text', 'YouTube');
             cy.wrap(iframes[0]).find('#edit-embed-code').type('https://www.youtube.com/watch?v=ck6QG9ME2aU');
             cy.wrap(iframes[0]).find('#media-internet-add-upload').submit();
           });
