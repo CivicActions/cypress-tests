@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Table select — replaces core implementation.
+ *
+ * @see tableselect.js
+ */
+
+td.checkbox,
+th.checkbox {
+  text-align: center;
+}
+[dir="rtl"] td.checkbox,
+[dir="rtl"] th.checkbox {
+  /* This is required to win over specificity of [dir="rtl"] td */
+  text-align: center;
+}
+
+tr.selected td {
+  background-color: var(--color-bgblue-active);
+}
