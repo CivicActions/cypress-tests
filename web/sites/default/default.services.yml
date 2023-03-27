@@ -115,7 +115,8 @@ parameters:
     # render array, hence varying every render array by these cache contexts.
     #
     # @default ['languages:language_interface', 'theme', 'user.permissions']
-    required_cache_contexts: ['languages:language_interface', 'theme', 'user.permissions']
+    required_cache_contexts:
+      ['languages:language_interface', 'theme', 'user.permissions']
     # Renderer automatic placeholdering conditions:
     #
     # Drupal allows portions of the page to be automatically deferred when
