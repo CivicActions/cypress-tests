@@ -7,6 +7,7 @@ module.exports = defineConfig({
     mochaFile: 'cypress/junit.[hash].xml',
   },
   e2e: {
+    baseUrl: 'https://cypress-tests.ddev.site',
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
         prepareAudit(launchOptions)

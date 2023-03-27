@@ -11,6 +11,23 @@ jobs:
       - name: Checkout source.
         uses: actions/checkout@v2
 
+      - uses: php-actions/composer@v6
+        with:
+          php_version: '8.1'
+          php_extensions: gd
+
+      - name: Install ddev.
+        run: |
+          curl -fsSL https://apt.fury.io/drud/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/ddev.gpg > /dev/null
+          echo "deb [signed-by=/etc/apt/trusted.gpg.d/ddev.gpg] https://apt.fury.io/drud/ * *" | sudo tee /etc/apt/sources.list.d/ddev.list
+          sudo apt update && sudo apt install -y ddev
+
+      - name: Boot dddev
+        run: ddev start
+
+      - name: Install site
+        run: ddev drush si --account-name=admin --account-pass=admin -y
+
       - name: Install cypress dependencies.
         run: yarn install --frozen-lockfile
 
@@ -31,3 +48,9 @@ jobs:
           name: cypress-results
           path: cypress
           retention-days: 2
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
