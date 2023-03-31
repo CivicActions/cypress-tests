@@ -19,6 +19,10 @@ can run the following commands:
 
     # Open the Cypress GUI to run e2e tests with the electron browser.
     npm run cy:open --e2e --browser electron
+
+    # Install Drupal site to run tests against.
+    # Sets up site at https://drupal.ddev.site
+    ./scripts/setup.sh
     ```
 
 ## Docs

@@ -12,5 +12,5 @@ cypress/videos
 cypress/screenshots
 cypress/junit.*.xml
 
-vendor
-web/sites/default/files
+# Created by /scripts/setup.sh
+drupal

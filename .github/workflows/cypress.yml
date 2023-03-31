@@ -22,11 +22,8 @@ jobs:
           echo "deb [signed-by=/etc/apt/trusted.gpg.d/ddev.gpg] https://apt.fury.io/drud/ * *" | sudo tee /etc/apt/sources.list.d/ddev.list
           sudo apt update && sudo apt install -y ddev
 
-      - name: Boot dddev
-        run: ddev start
-
-      - name: Install site
-        run: ddev drush si --account-name=admin --account-pass=admin -y
+      - name: Setup Drupal website.
+        run: ./scripts/setup.sh
 
       - name: Install cypress dependencies.
         run: yarn install --frozen-lockfile
