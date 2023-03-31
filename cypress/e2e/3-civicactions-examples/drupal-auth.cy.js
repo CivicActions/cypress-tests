@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 describe('Authentication tests', () => {
   beforeEach(() => {
-    Cypress.config('baseUrl', 'http://drupal.ddev.site');
-  });
+    Cypress.config('baseUrl', 'http://drupal.ddev.site')
+  })
 
   it('logs in without custom command', function () {
     cy.visit('/user/login')
