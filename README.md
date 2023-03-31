@@ -9,16 +9,20 @@ can run the following commands:
 
     ```bash
     # Install dependencies.
-    yarn
+    npm install
 
     # Run the Cypress example suite tests.
-    yarn cy:run:examples
+    npm run cy:run:examples
 
     # Run the CivicActions example suite tests.
-    yarn cy:run:ca-examples
+    npm run cy:run:ca-examples
 
     # Open the Cypress GUI to run e2e tests with the electron browser.
-    yarn cy:open --e2e --browser electron
+    npm run cy:open --e2e --browser electron
+
+    # Install Drupal site to run tests against.
+    # Sets up site at https://drupal.ddev.site
+    ./scripts/setup.sh
     ```
 
 ## Docs

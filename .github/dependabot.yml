@@ -12,3 +12,9 @@ updates:
     ignore:
       - dependency-name: 'cypress'
         update-types: ['version-update:semver-patch']
+  - package-ecosystem: 'composer'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      # Align with Drupal updates.
+      day: 'wednesday'
