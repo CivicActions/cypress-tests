@@ -25,3 +25,39 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import '@cypress-audit/lighthouse/commands'
+
+Cypress.Commands.add('login', (user, password) => {
+  return cy.session(
+    user,
+    () => {
+      cy.request({
+        method: 'POST',
+        url: '/user/login',
+        form: true,
+        body: {
+          name: user,
+          pass: password,
+          form_id: 'user_login_form',
+        },
+      })
+    },
+    {
+      // validate() {
+      //   cy.visit('/user_profile');
+      //   cy.contains(`Hello ${name}`);
+      // },
+      cacheAcrossSpecs: true,
+    }
+  )
+})
+
+Cypress.Commands.add('logout', () => {
+  return cy
+    .request({
+      url: '/user/logout',
+      failOnStatusCode: false,
+    })
+    .then(() => {
+      Cypress.session.clearAllSavedSessions()
+    })
+})
