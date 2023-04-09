@@ -1,8 +1,8 @@
-# Test interacts with CKEditor and Media Browser
+# Test interacts with CKEditor and Media Browser (Drupal 7)
 
 The below example test interacts WYSIWYG input on a Drupal node form page. Things to note:
 
-- Use of `intercept` and `wait` for the Media Browser. This [combination is recommended over waiting an arbitary amount of time](https://docs.cypress.io/guides/references/best-practices#Unnecessary-wait-for-cy-get).
+- Use of `intercept` and `wait` for the Media Browser. This [combination is recommended over waiting an arbitrary amount of time](https://docs.cypress.io/guides/references/best-practices#Unnecessary-wait-for-cy-get).
 - Use of `waitForBrowser` custom function:
 
 ```javascript
@@ -17,6 +17,7 @@ Cypress.Commands.add('waitForBrowser', () => {
 - Use of the [`iframe`](/utilities/iframe.js) custom function.
 - Use of [`wrap`](https://docs.cypress.io/api/commands/wrap) to interact with the iframe.
 - CKEditor loads in the buttons but there are initially in a "disabled" state and then they become enabled. Cypress can clicks the button even though it is disabled, the click is acknowledged as valid but the media browser does not open. A solution I found is to check that `aria-disabled` is not true which I think provided enough time for button to be enabled and for the test to actually continue properly.
+- In Drupal 10 and CKEditor 5 iframes are not used so this setup is not needed. Take a look at [`drupal-ckeditor.cy.js`](../../cypress/e2e/3-civicactions-examples/drupal-ckeditor.cy.js) for how examples of Drupal 10 and CKEdttor 5 tests.
 
 ## Test code
 
