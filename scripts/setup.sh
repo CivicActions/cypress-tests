@@ -3,10 +3,9 @@
 # Create directory for Drupal 10 so we don't blow away all the files in the
 # main directory.
 mkdir drupal
-cd drupal || exit
-
 # Copy configuration into the Drupal directory. Any configuration changes will require a copying back to the main directory.
-cp -r ../config .
+cp -r config drupal/.
+cd drupal || exit
 
 # Taken from https://ddev.readthedocs.io/en/stable/users/quickstart/
 ddev config --project-type=drupal10 --docroot=web --create-docroot
