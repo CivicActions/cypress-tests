@@ -57,7 +57,7 @@ describe('CKEditor tests', () => {
     cy.get('.ck-content').type('{selectall}')
 
     // Click bold button.
-    cy.get('.ck-button').contains('Bold').click()
+    cy.get('[data-cke-tooltip-text*="Bold"]').click()
 
     // Save page.
     cy.get('#edit-submit').click()
