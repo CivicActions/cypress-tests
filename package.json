@@ -16,7 +16,7 @@
   "dependencies": {
     "@cypress-audit/lighthouse": "^1.4.2",
     "axe-core": "^4.7.0",
-    "cypress": "^12.9.0",
+    "cypress": "^12.10.0",
     "cypress-axe": "^1.4.0",
     "x2js": "^3.4.4"
   }
