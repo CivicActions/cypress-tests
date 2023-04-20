@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+import 'cypress-real-events/support'
+
 describe('CKEditor tests', () => {
   beforeEach(() => {
     Cypress.config('baseUrl', 'http://drupal.ddev.site')
@@ -6,6 +8,7 @@ describe('CKEditor tests', () => {
 
   it('Logs in and create a page with normal text', () => {
     const title = 'CKEditor Test 1'
+    const text = 'This is normal text.'
 
     // Log in as an administrator.
     cy.login('admin', 'admin')
@@ -16,11 +19,11 @@ describe('CKEditor tests', () => {
     // Enter test in title.
     cy.get('input[name="title[0][value]"]').type(title)
 
-    // Enter normal text in body, from https://github.com/cypress-io/cypress/issues/26155.
-    cy.get('.ck-content[contenteditable=true]').then((el) => {
-      const editor = el[0].ckeditorInstance
-      editor.setData('This is normal text.')
-    })
+    // Focus on ckeditor window. Use clear to set the cursor at the beginning.
+    cy.get('.ck-content').focus().clear()
+
+    // Type some text.
+    cy.realType(text, {})
 
     // Save page.
     cy.get('#edit-submit').click()
@@ -29,7 +32,7 @@ describe('CKEditor tests', () => {
     cy.get('h1.page-title').contains(title)
 
     // View page and confirm the body normal text.
-    cy.get('.field--name-body p').contains('This is normal text.')
+    cy.get('.field--name-body p').contains(text)
 
     // Log out from being an administrator.
     cy.logout()
@@ -37,6 +40,7 @@ describe('CKEditor tests', () => {
 
   it('Logs in and create a page with bold text', () => {
     const title = 'CKEditor Test 2'
+    const text = 'This is bold text.'
 
     // Log in as an administrator.
     cy.login('admin', 'admin')
@@ -47,11 +51,11 @@ describe('CKEditor tests', () => {
     // Enter test in title.
     cy.get('input[name="title[0][value]"]').type(title)
 
-    // Enter normal text in body, from https://github.com/cypress-io/cypress/issues/26155.
-    cy.get('.ck-content[contenteditable=true]').then((el) => {
-      const editor = el[0].ckeditorInstance
-      editor.setData('This is bold text.')
-    })
+    // Focus on ckeditor window. Use clear to set the cursor at the beginning.
+    cy.get('.ck-content').focus().clear()
+
+    // Type some text.
+    cy.realType(text, {})
 
     // Select all text, from https://docs.cypress.io/api/commands/type#Arguments.
     cy.get('.ck-content').type('{selectall}')
@@ -66,7 +70,7 @@ describe('CKEditor tests', () => {
     cy.get('h1.page-title').contains(title)
 
     // View page and confirm the body bold text.
-    cy.get('.field--name-body p strong').contains('This is bold text.')
+    cy.get('.field--name-body p strong').contains(text)
 
     // Log out from being an administrator.
     cy.logout()
@@ -96,7 +100,7 @@ describe('CKEditor tests', () => {
     // Click remote video menu item.
     cy.get('.media-library-menu__item a[data-title="Remote video"]').click()
 
-    // Enter youtube URL in the field.
+    // Enter YouTube URL in the field.
     cy.get('input[name="url"]').type(
       'https://www.youtube.com/watch?v=ck6QG9ME2aU'
     )
