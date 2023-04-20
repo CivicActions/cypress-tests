@@ -1,6 +1,7 @@
 # Some Cypress plugins we use
 
-- [cypress-axe](https://github.com/component-driven/cypress-axe): Test accessibility with [axe-core](https://github.com/dequelabs/axe-core) in Cypress. See also [examples/AccessibilityTesting.md](/examples/AccessibilityTesting.md).
+- [cypress-axe](https://github.com/component-driven/cypress-axe): Test accessibility with [axe-core](https://github.com/dequelabs/axe-core) in Cypress. See also [examples/AccessibilityTesting.md](../docs/examples/AccessibilityTesting.md).
+- [cypress-real-events](https://github.com/dmtrKovalenko/cypress-real-events): Fire native events that can be used to mimic keyboard actions like tabs or type in WYSIWYG editors. See [Drupal CKEditor tests](../cypress/e2e/3-civicactions-examples/drupal-ckeditor.cy.js).
 - [cypress-testing-library](https://github.com/testing-library/cypress-testing-library): This allows you to use all the useful [DOM Testing Library](https://github.com/testing-library/cypress-testing-library) methods in your tests.
 
 ## Docker
