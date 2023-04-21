@@ -151,7 +151,7 @@ describe('CKEditor tests', () => {
     // Intercept CKEditor5 upload image.
     cy.intercept('/ckeditor5/upload-image/basic_html*').as('imageUpload')
 
-    // Upload file to hidden file input
+    // Upload file to hidden file input.
     cy.get('input[type="file"]').attachFile('test_image.jpg')
 
     // Wait for image upload.
@@ -167,8 +167,8 @@ describe('CKEditor tests', () => {
     cy.get('.field--name-body img')
       .should('be.visible')
       .and(($img) => {
-        // "naturalWidth" and "naturalHeight" are set when the image loads
-        expect($img[0].naturalWidth).to.be.equal(150)
+        // "naturalWidth" and "naturalHeight" are set when the image loads.
+        expect($img[0].naturalWidth).to.equal(150)
       })
 
     // Log out from being an administrator.
@@ -196,10 +196,10 @@ describe('CKEditor tests', () => {
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
 
-    // Upload file to the add file input
+    // Upload file to the add file input.
     cy.get('input[name="files[upload]"]').attachFile('test_image.jpg')
 
-    // Type alternate text
+    // Type alternate text for image.
     cy.get('input[name="media[0][fields][field_media_image][0][alt]"]').type(
       'Fen selfie at a rally.'
     )
@@ -226,8 +226,8 @@ describe('CKEditor tests', () => {
     cy.get('.field--name-body img')
       .should('be.visible')
       .and(($img) => {
-        // "naturalWidth" and "naturalHeight" are set when the image loads
-        expect($img[0].naturalWidth).to.be.equal(150)
+        // "naturalWidth" and "naturalHeight" are set when the image loads.
+        expect($img[0].naturalWidth).to.equal(150)
       })
 
     // Log out from being an administrator.
