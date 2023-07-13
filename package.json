@@ -16,7 +16,7 @@
   "dependencies": {
     "@cypress-audit/lighthouse": "^1.4.2",
     "axe-core": "^4.7.2",
-    "cypress": "^12.15.0",
+    "cypress": "^12.17.1",
     "cypress-axe": "^1.4.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-real-events": "^1.8.1",
