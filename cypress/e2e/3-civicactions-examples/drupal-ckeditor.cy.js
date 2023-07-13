@@ -2,6 +2,12 @@
 import 'cypress-real-events/support'
 import 'cypress-file-upload'
 
+// In a newer version of Drupal we are getting this error, so ignoring it for now.
+Cypress.on(
+  'uncaught:exception',
+  (err) => !err.message.includes('ResizeObserver loop limit exceeded')
+)
+
 describe('CKEditor tests', () => {
   beforeEach(() => {
     Cypress.config('baseUrl', 'http://drupal.ddev.site')
@@ -92,9 +98,6 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button.
-    cy.get('[data-cke-tooltip-text="Show more items"]').click()
-
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
 
@@ -157,6 +160,12 @@ describe('CKEditor tests', () => {
     // Wait for image upload.
     cy.wait('@imageUpload')
 
+    // Type alternate text for image.
+    cy.get('.ck-input-text_empty').type('Fen selfie at a rally.')
+
+    // Click alternate text save button.
+    cy.get('.ck-button-save').click()
+
     // Save page.
     cy.get('#edit-submit').click()
 
@@ -190,14 +199,11 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button.
-    cy.get('[data-cke-tooltip-text="Show more items"]').click()
-
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
 
     // Upload file to the add file input.
-    cy.get('input[name="files[upload]"]').attachFile('test_image.jpg')
+    cy.get('input[name="files[upload][]"]').attachFile('test_image.jpg')
 
     // Type alternate text for image.
     cy.get('input[name="media[0][fields][field_media_image][0][alt]"]').type(
