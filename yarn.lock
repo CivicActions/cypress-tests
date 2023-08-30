@@ -482,12 +482,10 @@ cypress-file-upload@^5.0.8:
   resolved "https://registry.yarnpkg.com/cypress-file-upload/-/cypress-file-upload-5.0.8.tgz#d8824cbeaab798e44be8009769f9a6c9daa1b4a1"
   integrity sha512-+8VzNabRk3zG6x8f8BWArF/xA/W0VK4IZNx3MV0jFWrJS/qKn8eHfa5nU73P9fOQAgwHFJx7zjg4lwOnljMO8g==
 
-cypress-real-events@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/cypress-real-events/-/cypress-real-events-1.10.0.tgz#6827ae4667561471c2a86bb4be30061fa9b177b8"
-  integrity sha512-ALSdCiG+Rj3Sl6qooqTFeFGBxOIe8QJUcgIuJ6ZVBanTEijXRzqxqstMC2ZKfixqj1TyNjolyZU4zOoN/jtHpg==
-  dependencies:
-    prettier "^3.0.0"
+cypress-real-events@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/cypress-real-events/-/cypress-real-events-1.10.1.tgz#289f2cb4a1d452e54a19e1ecd02931016b41b8ff"
+  integrity sha512-l4WvEymhup8EAheXVPqEi5gofBTCvhyYL/i3fOcJtL32prfpZ6jhnnXSLJsxOAl/RlmygIEP1ZeRpqrrDPgGIA==
 
 cypress@^12.17.1:
   version "12.17.1"
@@ -1303,11 +1301,6 @@ pify@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
-
-prettier@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.0.tgz#e7b19f691245a21d618c68bc54dc06122f6105ae"
-  integrity sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==
 
 pretty-bytes@^5.6.0:
   version "5.6.0"
