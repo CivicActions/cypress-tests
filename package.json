@@ -19,7 +19,7 @@
     "cypress": "^12.17.1",
     "cypress-axe": "^1.4.0",
     "cypress-file-upload": "^5.0.8",
-    "cypress-real-events": "^1.10.0",
+    "cypress-real-events": "^1.10.1",
     "x2js": "^3.4.4"
   }
 }
