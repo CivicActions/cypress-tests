@@ -1,5 +1,5 @@
 /*
- * Cucumber-like tag filter based on https://www.mariedrake.com/post/using-tags-to-filter-your-cypress-tests.
+ * Cucumber-like tag filter based on https://www.testingwithmarie.com/post/using-tags-to-filter-your-cypress-tests.
  */
 
 let tags = (definedTags) => {
