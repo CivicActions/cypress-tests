@@ -17,5 +17,7 @@ ddev exec echo '\$settings[\"config_sync_directory\"] = \"../config/sync\"\;' >>
 
 ddev drush site:install minimal --account-name=admin --account-pass=admin -y --existing-config
 
+ddev drush status
+
 # Return to the parent directory.
 cd ../
