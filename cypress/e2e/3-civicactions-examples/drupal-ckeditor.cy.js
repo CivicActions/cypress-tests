@@ -107,8 +107,8 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button.
-    cy.get('[data-cke-tooltip-text="Show more items"]').click()
+    // Click show more items button. Commenting this out because it is not needed again.
+    // cy.get('[data-cke-tooltip-text="Show more items"]').click()
 
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
@@ -211,14 +211,14 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button.
-    cy.get('[data-cke-tooltip-text="Show more items"]').click()
+    // Click show more items button. Commenting this out because it is not needed again.
+    // cy.get('[data-cke-tooltip-text="Show more items"]').click()
 
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
 
     // Upload file to the add file input.
-    cy.get('input[name="files[upload][]"]').attachFile('test_image.jpg')
+    cy.get('input[name="files[upload]"]').attachFile('test_image.jpg')
 
     // Type alternate text for image.
     cy.get('input[name="media[0][fields][field_media_image][0][alt]"]').type(

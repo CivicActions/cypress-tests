@@ -9,11 +9,11 @@ jobs:
 
     steps:
       - name: Checkout source.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - uses: php-actions/composer@v6
         with:
-          php_version: '8.1'
+          php_version: '8.3'
           php_extensions: gd
 
       - name: Install ddev.
@@ -39,7 +39,7 @@ jobs:
           check_name: 'Cypress Test Results'
 
       - name: Archive test results.
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: cypress-results

@@ -53,10 +53,9 @@ Cypress.Commands.add('login', (user, password) => {
 
 Cypress.Commands.add('logout', () => {
   return cy
-    .request({
-      url: '/user/logout',
-      failOnStatusCode: false,
-    })
+    .visit('/user/logout/confirm')
+    .get('#user-logout-confirm')
+    .submit()
     .then(() => {
       Cypress.session.clearAllSavedSessions()
     })
