@@ -118,7 +118,7 @@ describe('CKEditor tests', () => {
 
     // Enter YouTube URL in the field.
     cy.get('input[name="url"]').type(
-      'https://www.youtube.com/watch?v=ck6QG9ME2aU'
+      'https://www.youtube.com/watch?v=ck6QG9ME2aU',
     )
 
     // Click button to add video.
@@ -222,7 +222,7 @@ describe('CKEditor tests', () => {
 
     // Type alternate text for image.
     cy.get('input[name="media[0][fields][field_media_image][0][alt]"]').type(
-      'Fen selfie at a rally.'
+      'Fen selfie at a rally.',
     )
 
     // Click save button.
