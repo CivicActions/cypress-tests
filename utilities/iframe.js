@@ -50,10 +50,10 @@ Cypress.Commands.add(
                 }
               })
             }
-          })
+          }),
         )
       })
 
       return Promise.all(loaded).then(resolve)
-    })
+    }),
 )

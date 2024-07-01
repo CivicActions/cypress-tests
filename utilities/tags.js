@@ -9,7 +9,7 @@ let tags = (definedTags) => {
       // We split on space, as there's a bug with Cypress and commas.
       const envTags = Cypress.env('tags').split(' ')
       const isFound = definedTags.some((definedTag) =>
-        envTags.includes(definedTag)
+        envTags.includes(definedTag),
       )
 
       // If we have a tag match, run the passed function.

@@ -47,7 +47,7 @@ Cypress.Commands.add('login', (user, password) => {
       //   cy.contains(`Hello ${name}`);
       // },
       cacheAcrossSpecs: true,
-    }
+    },
   )
 })
 

@@ -29,7 +29,7 @@ it('YouTube video is added via media browser', () => {
 
   // Track GET and POST of the media browser URL.
   cy.intercept(
-    '/media/browser?render=media-popup&id=media_wysiwyg&plugins='
+    '/media/browser?render=media-popup&id=media_wysiwyg&plugins=',
   ).as('mediaBrowserURL')
 
   cy.visit(options.path)

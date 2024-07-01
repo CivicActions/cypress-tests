@@ -31,7 +31,7 @@ context('Accessibility', () => {
       'log',
       `${violations.length} accessibility violation${
         violations.length === 1 ? '' : 's'
-      } ${violations.length === 1 ? 'was' : 'were'} detected`
+      } ${violations.length === 1 ? 'was' : 'were'} detected`,
     )
     // pluck specific keys to keep the table readable
     const violationData = violations.map(
@@ -40,7 +40,7 @@ context('Accessibility', () => {
         impact,
         description,
         nodes: nodes.length,
-      })
+      }),
     )
 
     cy.task('table', violationData)
@@ -120,7 +120,7 @@ context('Accessibility', () => {
                   includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
                 },
                 cy.terminalLog,
-                true
+                true,
               )
             }
           })
