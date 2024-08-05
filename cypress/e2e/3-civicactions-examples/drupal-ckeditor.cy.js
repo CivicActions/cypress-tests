@@ -107,8 +107,8 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button. Commenting this out because it is not needed again.
-    // cy.get('[data-cke-tooltip-text="Show more items"]').click()
+    // Click show more items button.
+    cy.get('[data-cke-tooltip-text="Show more items"]').click()
 
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
@@ -127,11 +127,11 @@ describe('CKEditor tests', () => {
     // Click save button.
     cy.get('button').contains('Save').click()
 
-    // Click insert selected button.
-    cy.get('button').contains('Insert selected').click()
-
     // Intercept Drupal media.
     cy.intercept('/media/full_html/preview*').as('drupalMedia')
+
+    // Click insert selected button.
+    cy.get('button').contains('Insert selected').click()
 
     // Wait for Drupal media.
     cy.wait('@drupalMedia')
@@ -211,8 +211,8 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button. Commenting this out because it is not needed again.
-    // cy.get('[data-cke-tooltip-text="Show more items"]').click()
+    // Click show more items button.
+    cy.get('[data-cke-tooltip-text="Show more items"]').click()
 
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
@@ -228,11 +228,11 @@ describe('CKEditor tests', () => {
     // Click save button.
     cy.get('button').contains('Save').click()
 
-    // Click insert selected button.
-    cy.get('button').contains('Insert selected').click()
-
     // Intercept Drupal media.
     cy.intercept('/media/full_html/preview*').as('drupalMedia')
+
+    // Click insert selected button.
+    cy.get('button').contains('Insert selected').click()
 
     // Wait for Drupal media.
     cy.wait('@drupalMedia')
