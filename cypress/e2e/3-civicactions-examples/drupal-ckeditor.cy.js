@@ -107,8 +107,8 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button. Commenting this out because it is not needed again.
-    // cy.get('[data-cke-tooltip-text="Show more items"]').click()
+    // Click show more items button.
+    cy.get('[data-cke-tooltip-text="Show more items"]').click()
 
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
@@ -211,8 +211,8 @@ describe('CKEditor tests', () => {
     // Select full HTML body format.
     cy.get('select[name="body[0][format]"]').select('Full HTML')
 
-    // Click show more items button. Commenting this out because it is not needed again.
-    // cy.get('[data-cke-tooltip-text="Show more items"]').click()
+    // Click show more items button.
+    cy.get('[data-cke-tooltip-text="Show more items"]').click()
 
     // Click insert media button.
     cy.get('[data-cke-tooltip-text="Insert Media"]').click()
