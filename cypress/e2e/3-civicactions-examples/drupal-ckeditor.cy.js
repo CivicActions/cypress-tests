@@ -127,11 +127,11 @@ describe('CKEditor tests', () => {
     // Click save button.
     cy.get('button').contains('Save').click()
 
-    // Click insert selected button.
-    cy.get('button').contains('Insert selected').click()
-
     // Intercept Drupal media.
     cy.intercept('/media/full_html/preview*').as('drupalMedia')
+
+    // Click insert selected button.
+    cy.get('button').contains('Insert selected').click()
 
     // Wait for Drupal media.
     cy.wait('@drupalMedia')
@@ -228,11 +228,11 @@ describe('CKEditor tests', () => {
     // Click save button.
     cy.get('button').contains('Save').click()
 
-    // Click insert selected button.
-    cy.get('button').contains('Insert selected').click()
-
     // Intercept Drupal media.
     cy.intercept('/media/full_html/preview*').as('drupalMedia')
+
+    // Click insert selected button.
+    cy.get('button').contains('Insert selected').click()
 
     // Wait for Drupal media.
     cy.wait('@drupalMedia')
