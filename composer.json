@@ -19,7 +19,7 @@
         "drupal/core-composer-scaffold": "^11.0",
         "drupal/core-project-message": "^11.0",
         "drupal/core-recommended": "^11.0",
-        "drush/drush": "^13.0"
+        "drush/drush": "^13.1"
     },
     "conflict": {
         "drupal/drupal": "*"
