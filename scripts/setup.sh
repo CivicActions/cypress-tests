@@ -6,7 +6,7 @@ mkdir drupal
 cd drupal || exit
 
 # Taken from https://ddev.readthedocs.io/en/stable/users/quickstart/
-ddev config --project-type=drupal --php-version=8.3 --docroot=web --create-docroot
+ddev config --project-type=drupal --php-version=8.3 --docroot=web
 ddev start
 ddev composer create drupal/recommended-project
 ddev composer require drush/drush
