@@ -173,10 +173,7 @@ describe('CKEditor tests', () => {
     cy.wait('@imageUpload')
 
     // Type alternate text for image.
-    cy.get('.ck-input-text_empty').type('Fen selfie at a rally.')
-
-    // Click alternate text save button.
-    cy.get('.ck-button-save').click()
+    cy.get('.ck-input-text_empty').type('Fen selfie at a rally.{enter}')
 
     // Save page.
     cy.get('#edit-submit').click()
