@@ -19,7 +19,7 @@ While the hosts are blocked you still might see fetch/xhr requests in the Cypres
 
 ```javascript
 const cypressLogOriginal = Cypress.log
-const cypressLogDomainsHidden = ['fontawesome.com']
+const cypressLogDomainsHidden = ['https://google-analytics.com']
 Cypress.log = function (opts, ...other) {
 	const logFetchIs = ['fetch'].includes(opts.displayName)
 	const logFetchDomainMatch = logFetchIs && cypressLogDomainsHidden.find((d) => opts.url.includes(d))
