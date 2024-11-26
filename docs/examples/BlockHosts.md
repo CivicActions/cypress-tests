@@ -27,7 +27,8 @@ const cypressLogOriginal = Cypress.log
 const cypressLogDomainsHidden = ['https://www.google-analytics.com']
 Cypress.log = function (opts, ...other) {
   const logFetchIs = ['fetch'].includes(opts.displayName)
-  const logFetchDomainMatch = logFetchIs && cypressLogDomainsHidden.find((d) => opts.url.includes(d))
+  const logFetchDomainMatch =
+    logFetchIs && cypressLogDomainsHidden.find((d) => opts.url.includes(d))
   if (logFetchDomainMatch) return
 
   return cypressLogOriginal(opts, ...other)
