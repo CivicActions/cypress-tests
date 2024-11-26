@@ -12,18 +12,22 @@ The most common host you want to block in the tests in Google Analytics. To do t
     '*nr-data.net',
     '*youtube.com',
     '*tiqcdn.com',
+    '*touchpoints.app.cloud.gov',
+    '*script.crazyegg.com',
+    '*googletagmanager.com',
+    '*googleapis.com'
   ],
 ```
 
 While the hosts are blocked you still might see fetch/xhr requests in the Cypress logs/screenshots/videos. To hide those add the following to the `cypress/support/e2e.js` file:
 
 ```javascript
+// Hide fetch/XHR requests
 const cypressLogOriginal = Cypress.log
-const cypressLogDomainsHidden = ['https://google-analytics.com']
+const cypressLogDomainsHidden = ['https://www.google-analytics.com']
 Cypress.log = function (opts, ...other) {
   const logFetchIs = ['fetch'].includes(opts.displayName)
-  const logFetchDomainMatch =
-    logFetchIs && cypressLogDomainsHidden.find((d) => opts.url.includes(d))
+  const logFetchDomainMatch = logFetchIs && cypressLogDomainsHidden.find((d) => opts.url.includes(d))
   if (logFetchDomainMatch) return
 
   return cypressLogOriginal(opts, ...other)
