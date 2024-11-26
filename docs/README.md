@@ -56,4 +56,4 @@ For now, the examples exist in markdown files that you can read and copy into yo
 - [SSO Redirects and Basic Auth](examples/HandleSSORedirectAndBasicAuth.md) -
 - [Log Into Drupal and Create a Node](examples/LogIntoDrupalAndCreateANode.md) -
 - [Lighthouse Audits](examples/LighthouseAudits.md) -
-- [Block Hosts](examples/blockhosts.md) - 
+- [Block Hosts](examples/BlockHosts.md) - 
