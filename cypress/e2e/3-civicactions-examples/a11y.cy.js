@@ -5,19 +5,22 @@ import 'x2js'
 const X2JS = require('x2js')
 const path = require('path')
 
-context('Accessibility', () => {
+context('CA home site accessibility', () => {
   const casite = 'https://civicactions.com/'
-  const a11ysite = 'https://accessibility.civicactions.com/'
-
-  beforeEach(() => {
-    cy.visit(a11ysite)
-  })
 
   it('homesite should have one accessible failure', () => {
     cy.visit(casite)
     cy.injectAxe()
     // View example failure in the GUI.
     cy.checkA11y(null, null, null, true)
+  })
+})
+
+context('CA a11y site accessibility', () => {
+  const a11ysite = 'https://accessibility.civicactions.com/'
+
+  beforeEach(() => {
+    cy.visit(a11ysite)
   })
 
   it('a11y site should be accessible with default axe options', () => {
