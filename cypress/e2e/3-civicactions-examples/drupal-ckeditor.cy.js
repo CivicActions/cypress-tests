@@ -4,15 +4,9 @@ import 'cypress-file-upload'
 
 // In a newer version of Drupal we are getting this error, so ignoring it for now.
 const resizeObserverLoopErrRe = /^[^(ResizeObserver loop limit exceeded)]/
-// Drupal issue https://www.drupal.org/project/drupal/issues/3413079.
-const nodeTypePropertiesError =
-  /^[^(TypeError: Cannot read properties of null (reading 'nodeType'))]/
 Cypress.on('uncaught:exception', (err) => {
   /* returning false here prevents Cypress from failing the test */
   if (resizeObserverLoopErrRe.test(err.message)) {
-    return false
-  }
-  if (nodeTypePropertiesError.test(err.message)) {
     return false
   }
 })
