@@ -115,9 +115,7 @@ context('CA a11y site accessibility', () => {
               (() => {
                 const parsedUrl = url.parse(page[0])
                 const host = parsedUrl.host
-                const allowedHosts = [
-                  'accessibility.civicactions.com',
-                ]
+                const allowedHosts = ['accessibility.civicactions.com']
                 return allowedHosts.includes(host)
               })() &&
               path.extname(page[0]) !== '.pdf'
