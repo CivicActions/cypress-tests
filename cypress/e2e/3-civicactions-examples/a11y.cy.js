@@ -117,7 +117,6 @@ context('CA a11y site accessibility', () => {
                 const host = parsedUrl.host
                 const allowedHosts = [
                   'accessibility.civicactions.com',
-                  'www.accessibility.civicactions.com',
                 ]
                 return allowedHosts.includes(host)
               })() &&
