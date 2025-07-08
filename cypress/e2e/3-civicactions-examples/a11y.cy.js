@@ -113,13 +113,13 @@ context('CA a11y site accessibility', () => {
             if (
               withinTimeframe &&
               (() => {
-                const parsedUrl = url.parse(page[0]);
-                const host = parsedUrl.host;
+                const parsedUrl = url.parse(page[0])
+                const host = parsedUrl.host
                 const allowedHosts = [
                   'accessibility.civicactions.com',
-                  'www.accessibility.civicactions.com'
-                ];
-                return allowedHosts.includes(host);
+                  'www.accessibility.civicactions.com',
+                ]
+                return allowedHosts.includes(host)
               })() &&
               path.extname(page[0]) !== '.pdf'
             ) {
