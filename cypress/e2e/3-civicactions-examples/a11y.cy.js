@@ -4,6 +4,7 @@ import 'x2js'
 
 const X2JS = require('x2js')
 const path = require('path')
+const url = require('url')
 
 context('CA home site accessibility', () => {
   const casite = 'https://civicactions.com/'
@@ -111,7 +112,15 @@ context('CA a11y site accessibility', () => {
             // Ensure the page has been changed in the timeframe and the pages are not external or PDFs.
             if (
               withinTimeframe &&
-              page[0].includes(a11ysite) &&
+              (() => {
+                const parsedUrl = url.parse(page[0]);
+                const host = parsedUrl.host;
+                const allowedHosts = [
+                  'accessibility.civicactions.com',
+                  'www.accessibility.civicactions.com'
+                ];
+                return allowedHosts.includes(host);
+              })() &&
               path.extname(page[0]) !== '.pdf'
             ) {
               cy.visit(page[0], { failOnStatusCode: false })
