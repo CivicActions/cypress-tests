@@ -21,7 +21,6 @@ By exercising the Licensed Rights (defined below), You accept and agree to be bo
 ## Section 2 – Scope.
 
 1.  **License grant**.
-
     1.  Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:
         1.  reproduce and Share the Licensed Material, in whole or in part; and
         2.  produce, reproduce, and Share Adapted Material.
@@ -29,7 +28,6 @@ By exercising the Licensed Rights (defined below), You accept and agree to be bo
     3.  Term. The term of this Public License is specified in Section [6(a)](https://creativecommons.org/licenses/by-sa/4.0/legalcode#s6a).
     4.  Media and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section [2(a)(4)](https://creativecommons.org/licenses/by-sa/4.0/legalcode#s2a4) never produces Adapted Material.
     5.  Downstream recipients.
-
         1.  Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.
         2.  Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter's License You apply.
         3.  No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.
@@ -37,7 +35,6 @@ By exercising the Licensed Rights (defined below), You accept and agree to be bo
     6.  No endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section [3(a)(1)(A)(i)](https://creativecommons.org/licenses/by-sa/4.0/legalcode#s3a1Ai).
 
 2.  **Other rights**.
-
     1.  Moral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.
     2.  Patent and trademark rights are not licensed under this Public License.
     3.  To the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.
@@ -47,9 +44,7 @@ By exercising the Licensed Rights (defined below), You accept and agree to be bo
 Your exercise of the Licensed Rights is expressly made subject to the following conditions.
 
 1.  **Attribution**.
-
     1.  If You Share the Licensed Material (including in modified form), You must:
-
         1.  retain the following if it is supplied by the Licensor with the Licensed Material:
             1.  identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);
             2.  a copyright notice;
@@ -65,7 +60,6 @@ Your exercise of the Licensed Rights is expressly made subject to the following 
 2.  **ShareAlike**.
 
     In addition to the conditions in Section [3(a)](https://creativecommons.org/licenses/by-sa/4.0/legalcode#s3a), if You Share Adapted Material You produce, the following conditions also apply.
-
     1.  The Adapter's License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.
     2.  You must include the text of, or the URI or hyperlink to, the Adapter's License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.
     3.  You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter's License You apply.
@@ -91,7 +85,6 @@ For the avoidance of doubt, this Section [4](https://creativecommons.org/license
 
 1.  This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.
 2.  Where Your right to use the Licensed Material has terminated under Section [6(a)](https://creativecommons.org/licenses/by-sa/4.0/legalcode#s6a), it reinstates:
-
     1.  automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or
     2.  upon express reinstatement by the Licensor.
 
