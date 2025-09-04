@@ -488,10 +488,10 @@ csp_evaluator@1.1.1:
   resolved "https://registry.npmjs.org/csp_evaluator/-/csp_evaluator-1.1.1.tgz"
   integrity sha512-N3ASg0C4kNPUaNxt1XAvzHIVuzdtr8KLgfk1O8WDyimp1GisPAHESupArO2ieHk9QWbrJ/WkQODyh21Ps/xhxw==
 
-cypress-axe@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/cypress-axe/-/cypress-axe-1.6.0.tgz#2d70475e15356dd243ebcbfefd5719526f7ca9bc"
-  integrity sha512-C/ij50G8eebBrl/WsGT7E+T/SFyIsRZ3Epx9cRTLrPL9Y1GcxlQGFoAVdtSFWRrHSCWXq9HC6iJQMaI89O9yvQ==
+cypress-axe@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/cypress-axe/-/cypress-axe-1.7.0.tgz#258c007db13c637eaffec1cf2765090b521c07a0"
+  integrity sha512-zzJpvAAjauEB3GZl0KYXb8i3w6MztWAt2WM3czYTFyNVC30alDmqCm9E7GwZ4bgkldZJlmHakaVEyu73R5St4w==
 
 cypress-file-upload@^5.0.8:
   version "5.0.8"
