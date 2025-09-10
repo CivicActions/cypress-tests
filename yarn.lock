@@ -9,10 +9,10 @@
   dependencies:
     lighthouse "^10.0.2"
 
-"@cypress/request@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@cypress/request/-/request-3.0.8.tgz#992f1f42ba03ebb14fa5d97290abe9d015ed0815"
-  integrity sha512-h0NFgh1mJmm1nr4jCwkGHwKneVYKghUyWe6TMNrk0B9zsjAJxpg8C4/+BAcmLgCPa1vj1V8rNUaILl+zYRUWBQ==
+"@cypress/request@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@cypress/request/-/request-3.0.9.tgz#8ed6e08fea0c62998b5552301023af7268f11625"
+  integrity sha512-I3l7FdGRXluAS44/0NguwWlO83J18p0vlr2FYHrJkWdNYhgVoiYo61IXPqaOsL+vNxU1ZqMACzItGK3/KKDsdw==
   dependencies:
     aws-sign2 "~0.7.0"
     aws4 "^1.8.0"
@@ -20,7 +20,7 @@
     combined-stream "~1.0.6"
     extend "~3.0.2"
     forever-agent "~0.6.1"
-    form-data "~4.0.0"
+    form-data "~4.0.4"
     http-signature "~1.4.0"
     is-typedarray "~1.0.0"
     isstream "~0.1.2"
@@ -216,11 +216,6 @@ astral-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
-
-async@^3.2.0:
-  version "3.2.4"
-  resolved "https://registry.npmjs.org/async/-/async-3.2.4.tgz"
-  integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -503,12 +498,12 @@ cypress-real-events@^1.15.0:
   resolved "https://registry.yarnpkg.com/cypress-real-events/-/cypress-real-events-1.15.0.tgz#b84ed97455238139ac3d0c8f803991b30f22fc8a"
   integrity sha512-in98xxTnnM9Z7lZBvvVozm99PBT2eEOjXRG5LKWyYvQnj9mGWXMiPNpfw7e7WiraBFh7XlXIxnE9Cu5o+52kQQ==
 
-cypress@^14.5.0:
-  version "14.5.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-14.5.0.tgz#5b02b06993a9dcea9b9146fc02840a92f6a40584"
-  integrity sha512-1HOnKvWep0LkWuFwPeWkZ0TDl7ivi2/Mz+WNU4dfkeLJaFndS3Ow6TXT7YjuTqLFI2peJKzPKljVUFdymI2K5g==
+cypress@^15.2.0:
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-15.2.0.tgz#a1b48c8ef00f520fbaea60261ed244c8382dd3bc"
+  integrity sha512-J4ehSzOSb58SkXyldCe9y/oZ8ep8Bl6+q9kDUjnkqNqc2ZKzDq5KSbhIc2lHFAFR5Jtj10oNqr9JRAZbr8DA8A==
   dependencies:
-    "@cypress/request" "^3.0.8"
+    "@cypress/request" "^3.0.9"
     "@cypress/xvfb" "^1.2.4"
     "@types/sinonjs__fake-timers" "8.1.1"
     "@types/sizzle" "^2.3.2"
@@ -533,7 +528,6 @@ cypress@^14.5.0:
     extract-zip "2.0.1"
     figures "^3.2.0"
     fs-extra "^9.1.0"
-    getos "^3.2.1"
     hasha "5.2.2"
     is-installed-globally "~0.4.0"
     lazy-ass "^1.6.0"
@@ -548,7 +542,8 @@ cypress@^14.5.0:
     request-progress "^3.0.0"
     semver "^7.7.1"
     supports-color "^8.1.1"
-    tmp "~0.2.3"
+    systeminformation "5.27.7"
+    tmp "~0.2.4"
     tree-kill "1.2.2"
     untildify "^4.0.0"
     yauzl "^2.10.0"
@@ -803,7 +798,7 @@ forever-agent@~0.6.1:
   resolved "https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz"
   integrity sha512-j0KLYPhm6zeac4lz3oJ3o65qvgQCcPubiyotZrXqEaG4hNagNYO8qdlUrX5vwqv9ohqeT/Z3j6+yW067yWWdUw==
 
-form-data@~4.0.0:
+form-data@~4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.4.tgz#784cdcce0669a9d68e94d11ac4eea98088edd2c4"
   integrity sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==
@@ -883,13 +878,6 @@ get-uri@^6.0.1:
     data-uri-to-buffer "^6.0.2"
     debug "^4.3.4"
     fs-extra "^11.2.0"
-
-getos@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.npmjs.org/getos/-/getos-3.2.1.tgz"
-  integrity sha512-U56CfOK17OKgTVqozZjUKNdkfEv6jk5WISBJ8SHoagjE6L69zOwl3Z+O8myjY9MEW3i2HPWQBt/LTbCgcC973Q==
-  dependencies:
-    async "^3.2.0"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -1742,6 +1730,11 @@ supports-color@^8.1.1:
   dependencies:
     has-flag "^4.0.0"
 
+systeminformation@5.27.7:
+  version "5.27.7"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.27.7.tgz#4dc9d436419948cd5e5f076779a1298220d19a72"
+  integrity sha512-saaqOoVEEFaux4v0K8Q7caiauRwjXC4XbD2eH60dxHXbpKxQ8kH9Rf7Jh+nryKpOUSEFxtCdBlSUx0/lO6rwRg==
+
 tar-fs@3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/tar-fs/-/tar-fs-3.0.4.tgz"
@@ -1794,10 +1787,10 @@ tldts@^6.1.32:
   dependencies:
     tldts-core "^6.1.61"
 
-tmp@~0.2.3:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.2.4.tgz#c6db987a2ccc97f812f17137b36af2b6521b0d13"
-  integrity sha512-UdiSoX6ypifLmrfQ/XfiawN6hkjSBpCjhKxxZcWlUUmoXLaCKQU0bx4HF/tdDK2uzRuchf1txGvrWBzYREssoQ==
+tmp@~0.2.4:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.2.5.tgz#b06bcd23f0f3c8357b426891726d16015abfd8f8"
+  integrity sha512-voyz6MApa1rQGUxT3E+BK7/ROe8itEx7vD8/HEvt4xwXucvQ5G5oeEiHkmHZJuBO21RpOf+YYm9MOivj709jow==
 
 tough-cookie@^5.0.0:
   version "5.0.0"
