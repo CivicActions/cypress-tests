@@ -20,6 +20,7 @@
     "cypress-axe": "^1.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-real-events": "^1.15.0",
+    "url": "^0.11.4",
     "x2js": "^3.4.4"
   }
 }
