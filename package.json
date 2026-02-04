@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "axe-core": "^4.11.1",
-    "cypress": "^15.9.0",
+    "cypress": "^15.10.0",
     "cypress-axe": "^1.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-lighthouse-plugin": "^0.3.0",
