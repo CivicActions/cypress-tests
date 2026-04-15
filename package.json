@@ -14,7 +14,7 @@
     "cy:run:ca-examples": "cypress run --spec \"cypress/e2e/3-civicactions-examples/*.cy.js\""
   },
   "dependencies": {
-    "axe-core": "^4.11.2",
+    "axe-core": "^4.11.3",
     "cypress": "^15.13.0",
     "cypress-axe": "^1.7.0",
     "cypress-file-upload": "^5.0.8",
