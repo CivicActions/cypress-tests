@@ -295,10 +295,10 @@ cypress-real-events@^1.15.0:
   resolved "https://registry.npmjs.org/cypress-real-events/-/cypress-real-events-1.15.0.tgz"
   integrity sha512-in98xxTnnM9Z7lZBvvVozm99PBT2eEOjXRG5LKWyYvQnj9mGWXMiPNpfw7e7WiraBFh7XlXIxnE9Cu5o+52kQQ==
 
-cypress@^15.18.0:
-  version "15.18.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-15.18.0.tgz#2d98799596c6a730090375c39c440b36726af7b8"
-  integrity sha512-aLfOYSLlVt1b6QSoVUjbCY27taZlYAT8ST47xQbwd9pvQrY/g5gXi12yItZTB+kxkkj+ZcvUYmRLUC95SlCJsw==
+cypress@^15.19.0:
+  version "15.19.0"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-15.19.0.tgz#357647278394fedc6aa04fe894afca41d4cbcf04"
+  integrity sha512-kjy1u3SWlMRWS5qffH3U+bXx1PqPP7qwhIzEY3UtERcW2r/8zy5uk6uSwa75pYXJyYFVP1SO8mAn/avZUvUbfg==
   dependencies:
     "@cypress/request" "^4.0.0"
     "@cypress/xvfb" "^1.2.4"
