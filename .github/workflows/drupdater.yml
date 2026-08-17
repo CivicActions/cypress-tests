@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout source.
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Cache Docker images.
         uses: ScribeMD/docker-cache@0.5.0
@@ -37,14 +39,14 @@ jobs:
         run: ./scripts/setup.sh
 
       - name: Run Drupdater.
-        run: docker run -v "$(pwd)/drupal":/app -w /app ghcr.io/drupdater/drupdater-php8.4:latest --dry-run --verbose --report /app/drupdater-report.json
+        run: docker run -v "$(pwd)":/app -w /app ghcr.io/drupdater/drupdater-php8.4:latest --dry-run --verbose --report /app/drupdater-report.json
 
       - name: Archive Drupdater results.
         uses: actions/upload-artifact@v7
         if: always()
         with:
           name: drupdater-report.json
-          path: /app
+          path: drupdater-report.json
           retention-days: 2
 
       - name: Cache Composer dependencies
