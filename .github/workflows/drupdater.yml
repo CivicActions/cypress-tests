@@ -1,4 +1,4 @@
-name: Drupdater
+name: Drupadater
 
 on:
   schedule:
@@ -6,27 +6,41 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
-  drupdater:
+  build:
+    name: Building site and running Drupdater
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/drupdater/drupdater-php8.4:latest
+
     steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0 # full history required to push the update branch
+      - name: Checkout source.
+        uses: actions/checkout@v7
 
       - uses: php-actions/composer@v6
         with:
           php_version: '8.4'
           php_extensions: gd
 
+      - name: Install ddev.
+        run: |
+          curl -fsSL https://apt.fury.io/drud/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/ddev.gpg > /dev/null
+          echo "deb [signed-by=/etc/apt/trusted.gpg.d/ddev.gpg] https://apt.fury.io/drud/ * *" | sudo tee /etc/apt/sources.list.d/ddev.list
+          sudo apt update && sudo apt install -y ddev
+
+      - name: Setup Drupal website.
+        run: ./scripts/setup.sh
+
+      - name: Run Drupdater.
+        run: docker run -v "$(pwd)/drupal":/app -w /app ghcr.io/drupdater/drupdater-php8.4:latest check
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v6
+        with:
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+
       - name: Cache Docker images.
         uses: ScribeMD/docker-cache@0.5.0
         with:
           key: docker-${{ runner.os }}
-
-      - run: /opt/drupdater/bin "${{ secrets.GITHUB_TOKEN }}"
