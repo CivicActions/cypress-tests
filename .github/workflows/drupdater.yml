@@ -32,7 +32,15 @@ jobs:
         run: ./scripts/setup.sh
 
       - name: Run Drupdater.
-        run: docker run -v "$(pwd)/drupal":/app -w /app ghcr.io/drupdater/drupdater-php8.4:latest check
+        run: docker run -v "$(pwd)/drupal":/app -w /app ghcr.io/drupdater/drupdater-php8.4:latest --dry-run --verbose --report /app/drupdater-report.json
+
+      - name: Archive Drupdater results.
+        uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: drupdater-report.json
+          path: /app
+          retention-days: 2
 
       - name: Cache Composer dependencies
         uses: actions/cache@v6
