@@ -14,6 +14,11 @@ jobs:
       - name: Checkout source.
         uses: actions/checkout@v7
 
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: docker-${{ runner.os }}
+
       - uses: php-actions/composer@v6
         with:
           php_version: '8.4'
