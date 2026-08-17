@@ -11,8 +11,9 @@ ddev start
 ddev composer create drupal/recommended-project
 ddev composer require drush/drush
 
-# Add config/sync directory to settings.
-ddev exec echo '\$settings["config_sync_directory"] = "../../config/sync";' >> web/sites/default/settings.php
+# Copy configuration into the Drupal directory. Any configuration changes will require a copying back to the main directory.
+cp -r ../config .
+ddev exec echo '\$settings["config_sync_directory"] = "../config/sync";' >> web/sites/default/settings.php
 
 ddev drush site:install minimal --account-name=admin --account-pass=admin -y --existing-config
 
