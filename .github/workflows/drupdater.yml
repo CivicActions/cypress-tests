@@ -2,7 +2,7 @@ name: Drupdater
 
 on:
   schedule:
-    - cron: "0 4 * * 1"   # Mondays 04:00 UTC
+    - cron: '0 4 * * 1' # Mondays 04:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -17,6 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # full history required to push the update branch
+          fetch-depth: 0 # full history required to push the update branch
 
       - run: /opt/drupdater/bin "${{ secrets.GITHUB_TOKEN }}"
