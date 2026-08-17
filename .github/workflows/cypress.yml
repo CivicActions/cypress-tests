@@ -16,8 +16,13 @@ jobs:
 
       - uses: php-actions/composer@v6
         with:
-          php_version: '8.3'
+          php_version: '8.4'
           php_extensions: gd
+
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: docker-${{ runner.os }}
 
       - name: Install ddev.
         run: |

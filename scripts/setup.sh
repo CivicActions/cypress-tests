@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Create directory for Drupal 10 so we don't blow away all the files in the
+# Create directory for Drupal so we don't blow away all the files in the
 # main directory.
 mkdir drupal
 cd drupal || exit

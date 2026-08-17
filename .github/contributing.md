@@ -25,7 +25,7 @@ process notes and let them evolve as new contributors join.
 At CivicActions we strive to be a welcoming and inclusive community. Please read our company Code of Conduct which
 applies to all interactions we have in this repository.
 
-https://handbook.civicactions.com/en/latest/030-policies/code-of-conduct
+https://guidebook.civicactions.com/en/latest/company-policies/code-of-conduct/
 
 ## Git Workflow
 
