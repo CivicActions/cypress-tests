@@ -1,8 +1,8 @@
 name: Drupadater
 
 on:
-#  schedule:
-#    - cron: '0 4 * * 1' # Mondays 04:00 UTC
+  #  schedule:
+  #    - cron: '0 4 * * 1' # Mondays 04:00 UTC
   workflow_dispatch:
 
 permissions:
