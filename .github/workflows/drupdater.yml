@@ -1,0 +1,22 @@
+name: Drupdater
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"   # Mondays 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  drupdater:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/drupdater/drupdater-php8.4:latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history required to push the update branch
+
+      - run: /opt/drupdater/bin "${{ secrets.GITHUB_TOKEN }}"
