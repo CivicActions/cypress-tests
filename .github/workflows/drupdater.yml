@@ -15,8 +15,18 @@ jobs:
     container:
       image: ghcr.io/drupdater/drupdater-php8.4:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # full history required to push the update branch
+
+      - uses: php-actions/composer@v6
+        with:
+          php_version: '8.4'
+          php_extensions: gd
+
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.5.0
+        with:
+          key: docker-${{ runner.os }}
 
       - run: /opt/drupdater/bin "${{ secrets.GITHUB_TOKEN }}"
