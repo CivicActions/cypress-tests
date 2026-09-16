@@ -48,10 +48,10 @@
   resolved "https://registry.npmjs.org/@types/tmp/-/tmp-0.2.6.tgz"
   integrity sha512-chhaNf2oKHlRkDGt+tiKE2Z5aJ6qalm7Z9rlLdBwmOiAAf09YQvvoLXjWK4HWPF1xU/fqvMgfNfpVoBscA/tKA==
 
-"@xmldom/xmldom@^0.8.3":
-  version "0.8.15"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.8.15.tgz#71ebf80729e4e95221d519ac9b1e1eaea7784907"
-  integrity sha512-/5NV/vDALVFDXgLmfsy9TRCBlKwO2LNBFzpzvb9iIj+jR+eSc6DLYYvVOdivT/jm7MtU6TebYuRmzEOI7w40UA==
+"@xmldom/xmldom@^0.9.12":
+  version "0.9.12"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.9.12.tgz#1f84c07cb95ccf28202299f77b5fd7fc257151e8"
+  integrity sha512-5AXjrcMClTryPe9LgZrygpB1lj7s0S9E0+W+AHaVKAVyHanafK86iPSvG5xHVSp/jC+VH1UXu0TAEmY279xH7A==
 
 ansi-escapes@^7.0.0:
   version "7.3.0"
@@ -1198,12 +1198,12 @@ ws@^7.2.0:
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.13.tgz#12aa507eaca76c295c278b1aebf4698ab2c1845f"
   integrity sha512-rsKI6xDBFVf4r/x8XyChGK04QR/XHroxs/jUcoWvtEZM8TPU/X/uIY9B1CsSzYws9ZJb/6bbBu7dPhFW00CAoA==
 
-x2js@^3.4.4:
-  version "3.4.4"
-  resolved "https://registry.npmjs.org/x2js/-/x2js-3.4.4.tgz"
-  integrity sha512-yG/ThaBCgnsa3aoMPAe7QwDpcyU4D70hjXC4Y1lZSfD/Tgd0MpE19FnZZRAjekryw0c8cffpOt9zsPEiqktO6Q==
+x2js@^3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/x2js/-/x2js-3.4.5.tgz#a1977e1996302f43e3d78ed02affa101c60c28b4"
+  integrity sha512-NwRdxmyOK/XifRMSFopYm8eyF6VXi3C2kUt+pui3RBqD62vpMY7edmJ4XiElplFWHIRyNywML+9PjzQV+/MI4Q==
   dependencies:
-    "@xmldom/xmldom" "^0.8.3"
+    "@xmldom/xmldom" "^0.9.12"
 
 yauzl@^3.3.1:
   version "3.3.1"

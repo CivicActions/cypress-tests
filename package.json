@@ -21,6 +21,6 @@
     "cypress-lighthouse-plugin": "^0.3.0",
     "cypress-real-events": "^1.15.0",
     "url": "^0.11.4",
-    "x2js": "^3.4.4"
+    "x2js": "^3.4.5"
   }
 }
