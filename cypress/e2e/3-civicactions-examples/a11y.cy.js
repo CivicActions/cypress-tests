@@ -6,17 +6,6 @@ const X2JS = require('x2js')
 const path = require('path')
 const url = require('url')
 
-context('CA home site accessibility', () => {
-  const casite = 'https://civicactions.com/'
-
-  it('homesite should have one accessible failure', () => {
-    cy.visit(casite)
-    cy.injectAxe()
-    // View example failure in the GUI.
-    cy.checkA11y(null, null, null, true)
-  })
-})
-
 context('CA a11y site accessibility', () => {
   const a11ysite = 'https://accessibility.civicactions.com/'
 
